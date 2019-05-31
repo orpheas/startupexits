@@ -28,7 +28,7 @@ Following an established theoretical framework when analysing and interpreting d
 
 The CRISP-DM model is comprised of six phases, as seen in Figure 1 below.
 
-[CRISP-DM](https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/CRISP-DM_Process_Diagram.png/479px-CRISP-DM_Process_Diagram.png)
+![CRISP-DM](https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/CRISP-DM_Process_Diagram.png/479px-CRISP-DM_Process_Diagram.png)
 
 In more detail, these phases are:
 
