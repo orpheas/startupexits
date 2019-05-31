@@ -28,6 +28,8 @@ Following an established theoretical framework when analysing and interpreting d
 
 The CRISP-DM model is comprised of six phases, as seen in Figure 1 below.
 
+[CRISP-DM](https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/CRISP-DM_Process_Diagram.png/479px-CRISP-DM_Process_Diagram.png)
+
 In more detail, these phases are:
 
 Business understanding: At this stage, focus is placed on understanding the business background of the project and the data, how these can be translated to objectives and requirements, and, finally, how these objectives can add value to the business.
