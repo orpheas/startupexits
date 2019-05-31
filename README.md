@@ -22,7 +22,7 @@ iterations have been recommended in order to produce a better and more robust mo
 
 The analysis dataset was acquired via https://data.crunchbase.com/docs.
 
-## Data Analysis
+## Analysis Framework
 
 Following an established theoretical framework when analysing and interpreting data is of paramount importance. Such a framework guides and ensures the quality of the analytical process (Saunders, Lewis, & Thornhill, 2015). One of the most popular analytical methodologies is the Cross-industry standard process for data mining — CRISP-DM (KD Nuggets, 2014). CRISP-DM was initially conceived in 1996 and was eventually developed into a full-fledged methodology by an industrial consortium funded by the European Commission. It was formally presented in 2000 (Chapman, et al., 2000).
 
