@@ -21,6 +21,7 @@ iterations have been recommended in order to produce a better and more robust mo
 ## References
 
 Ali-Yrkkö, J., Hyytinen, A., & Pajarinen, M. (2005). Does patenting increase the probability of being acquired? Evidence from cross-border and domestic acquisitions. Applied Financial Economics, 15(14), 1007-1017.
+
 Alpaydin, E., & Bach, F. (2014). Introduction to Machine Learning. MIT Press.
 Baesens, B. (2014). Analytics in a Big Data World: The Essential Guide to Data Science and Its Applications. John Wiley & Sons, Incorporated.
 Bento, F. (2018). Predicting start-up success with machine learning. Doctoral Dissertation.
