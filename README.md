@@ -32,17 +32,17 @@ The CRISP-DM model is comprised of six phases, as seen in Figure 1 below.
 
 In more detail, these phases are:
 
-_Business understanding_: At this stage, focus is placed on understanding the business background of the project and the data, how these can be translated to objectives and requirements, and, finally, how these objectives can add value to the business.
+__Business understanding__: At this stage, focus is placed on understanding the business background of the project and the data, how these can be translated to objectives and requirements, and, finally, how these objectives can add value to the business.
 
-_Data understanding_: The data understanding phase includes the collection of data to be analysed, as well as data familiarization activities. These consist of running summary statistics, data visualisations, uncovering initial insights, as well subsets of the data that may be of interest.
+__Data understanding__: The data understanding phase includes the collection of data to be analysed, as well as data familiarization activities. These consist of running summary statistics, data visualisations, uncovering initial insights, as well subsets of the data that may be of interest.
 
-_Data preparation_: This stage encompasses all activities required in order to produce the final dataset for analysis. These activities are data transformation (transforming the data types), data cleaning (removing missing value entries or substituting them), as well as feature engineering (selecting the features/variables to be used for the analytical model).
+__Data preparation__: This stage encompasses all activities required in order to produce the final dataset for analysis. These activities are data transformation (transforming the data types), data cleaning (removing missing value entries or substituting them), as well as feature engineering (selecting the features/variables to be used for the analytical model).
 
-_Modelling_: In the modelling phase, various analytical & modelling techniques are selected and applied on the finalized dataset. Several techniques may be used. Models used also re-inform the data preparation phase, with the analyst often able to edit and re-establish the final dataset.
+__Modelling__: In the modelling phase, various analytical & modelling techniques are selected and applied on the finalized dataset. Several techniques may be used. Models used also re-inform the data preparation phase, with the analyst often able to edit and re-establish the final dataset.
 
-_Evaluation_: At this stage of the analysis, the models built are subject to evaluation, based on relevant metrics (e.g. accuracy, true positives and false negatives, etc.). The analyst is also responsible for evaluating whether the target objectives have been met and whether it is appropriate to alter current models or develop models anew.
+__Evaluation__: At this stage of the analysis, the models built are subject to evaluation, based on relevant metrics (e.g. accuracy, true positives and false negatives, etc.). The analyst is also responsible for evaluating whether the target objectives have been met and whether it is appropriate to alter current models or develop models anew.
 
-_Deployment_: At the Deployment phase – the final phase – the final model is ready to be deployed. The deployment phase may range from helping guide the client on how to embed the model to his organizational needs, to simply producing a final report. In our case, deployment refers to the presentation of the final model.
+__Deployment__: At the Deployment phase – the final phase – the final model is ready to be deployed. The deployment phase may range from helping guide the client on how to embed the model to his organizational needs, to simply producing a final report. In our case, deployment refers to the presentation of the final model.
 
 ## References
 
