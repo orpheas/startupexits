@@ -96,8 +96,11 @@ Accuracy = (TP + TN) / (TP + FP + FN + TN)
 
 Other metrics are defined as:
 Precision (ability to find all relevant instances that are actually relevant) = TP / (TP+FP)
+
 True Positive Rate (ability to find all relevant instances) = TP / (TP+FN)
+
 False Positive Rate (the rate of falsely identifying negatives as positives)= FP / (FP + TN)
+
 F1 Score = 2 * ((Precision*Recall) / (Precision+Recall))
 
 ## References
