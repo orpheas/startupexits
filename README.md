@@ -44,6 +44,62 @@ __Evaluation__: At this stage of the analysis, the models built are subject to e
 
 __Deployment__: At the Deployment phase – the final phase – the final model is ready to be deployed. The deployment phase may range from helping guide the client on how to embed the model to his organizational needs, to simply producing a final report. In our case, deployment refers to the presentation of the final model.
 
+## Business Understanding
+
+On their seminal report on Venture Capital, Gompers, Gornall, Kaplan, & Strebulaev (2016), conducted surveys on 889 venture capitalists from 681 different firms, in order to better understand how they function and what they believe are the most important aspects of successful startups. Among core VC functions, the report lists deal sourcing, investment selection, valuation, deal structure, post investment value-added, exits, internal firm organization, and relationships with limited partners. A majority of VCs see the startup team as a more valuable characteristic than the type of product or the startup domain (considered by 95% of VCs as an important factor and by 47% as the most important factor). The startup business model was rated as important by 83% of VCs, the product of the startup by 74%, the market maturity by 68%, and the industry/domain by 31% of VCs.
+
+In predictive modeling, the literature seems to feature prominent works particularly in M&A prediction, with IPO prediction focusing mostly on share pricing.
+
+Ragothaman, Naik, & Ramakrishnan (2002) utilized rule-induction methods to create an expert system for acquisition prediction; with the features built out of, primarily, financial metrics. The classification accuracy on the holdout sample were 81.3% for the acquisition and 65.6% for the non-acquisition cases.
+
+Wei, Jiang, & Yang (2008) engineered features out of patent data; namely number of patents a company holds, patent impact, etc. They also formulated M&A prediction as a classification problem. Using an ensemble method, with Naïve Bayes classifiers and by assigning different weights to their features, they achieved a weighted average accuracy of 87.94%, with a Recall of 45.37% and Precision of 41.97% on the acquired companies, and a Recall of 92.8% and Precision of 93.67% on non-acquired companies.
+
+Ali-Yrkkö, Hyytinen, & Pajarinen (2005) followed a similar approach, attempting to predict company acquisitions based on patenting and other company data of Finnish firms (firm size, free cash flow, etc.). Utilizing patent registration data from the European Patent Office (EPO), they employed a logistic regression algorithm to conduct a hypothesis test on whether these features affect acquisitions.
+
+Meador, Church, & Rayburn (1996) focused on primarily financial (Long-term debt/Total Assets, Long-term Debt/Market Value) and other company data (firm size) and produced, once again, a logistic regression model for M&A prediction. The accuracy for correctly predicted M&A was 77.27% level, while for the non-M&A it was 50%. The dataset, however, was once again rather small (<200 observations).
+Investigating predictive uses of Crunchbase data, we mainly come across Xiang, et al. (2012), as well as two more obscure works (0-1 citations).
+
+Xiang, et al. (2012) uses both Crunchbase, as well as Techcrunch (startup news website) data (e.g. number of articles on the startup, as well as topical features extracted from said articles), attempting to predict company acquisitions. The problem is again formulated as a binary classification problem, with the first, “successful” group defined as the group of acquired startups, and the second, “unsuccesful” group defined as the group of non-acquired startups or startups that IPO’d.
+The paper split companies in sub-samples according to industry domains. Using Bayesian Networks, they achieved True Positive percentages ranging up to 79.8%, with False Positive rates ranging between 0-8.3%. Support Vector Machine and Logistic Regression algorithms were also employed; they, however, greatly underperformed compared to the Bayesian networks. In a given example, they state that “the TP (True Positive) and FP (False Positive) on companies in the aggregate “computer” category for SVM (Support Vector Machine) and LR (Logistic Regression) without topic features are 39.6%/0.1% and 2.8%/0.3% respectively, while BN achieved 59.9%/2.2%.”
+
+Looking at the two more obscure papers, we firstly see Bento (2017) utilizing exclusively the Crunchbase dataset and formulating the problem as a binary classification problem (Group 1 being startups that either got funded or were acquired, Group 2 being non-funded and non-acquired startups). By using a Random Forest model, the paper achieves a True Positive Rate of 94.1% and a False Positive Rate of 7.8%, with a Precision rate of 92.2% and the AUC (Area Under Curve) at 93.2%.
+
+Finally, Pan, Gao, & Luo (2018) utilized another instance of the Crunchbase dataset on a binary classification formulation (Group 1 being startups that reached IPO or were acquired, Group 2 being startups that neither reached IPO, neither were acquired), and employing a K-nearest Neighbors algorithm, achieved an F1 score of 44.45% and an accuracy of 73.70%.
+
+## Data Understanding
+
+_Data is confidential_
+
+## Data Preparation
+
+We have tested for __missing values__, __outliers__, and __categorized__ and __binned__ features, since we are dealing with a binary classification problem.
+
+## Modelling 
+
+Tested for __imbalance__ in the dataset and treated the imbalance with __oversampling__ the minority class.
+
+In terms of algorithms, we utilized a Logistic Regression algorithm, as well as a Support Vector Machine algorithm. We have first trained the models on a training split (70%), and subsequently tested on the testing split (30%).
+
+Logistic Regression turned out to be our better performing model with an F1 score of 61.69%, a Precision score of 63.07%, and TPR/FPR rates of 70.10%/57.55%.
+
+## Evaluation
+
+The main metrics used to build upon further evaluation models, are the numbers of True Positives (TP), True Negatives (TN), False Positives (FP), and False Negatives (FN). Most evaluation metrics are built upon these main measures.
+
+- TP rate is the rate of classifying a company as acquired/IPO, while it is indeed acquired/IPO
+- FP rate is the rate of classifying a company as acquired/IPO, while it is not acquired/IPO
+- FN rate is the rate of classifying a company as not acquired/IPO, while it is acquired/IPO
+- TN rate is the rate of classifying a company as not acquired/IPO, while it is indeed not acquired/IPO
+
+Overall classification accuracy is defined as:
+Accuracy = (TP + TN) / (TP + FP + FN + TN)
+
+Other metrics are defined as:
+Precision (ability to find all relevant instances that are actually relevant) = TP / (TP+FP)
+True Positive Rate (ability to find all relevant instances) = TP / (TP+FN)
+False Positive Rate (the rate of falsely identifying negatives as positives)= FP / (FP + TN)
+F1 Score = 2 * ((Precision*Recall) / (Precision+Recall))
+
 ## References
 
 Ali-Yrkkö, J., Hyytinen, A., & Pajarinen, M. (2005). Does patenting increase the probability of being acquired? Evidence from cross-border and domestic acquisitions. Applied Financial Economics, 15(14), 1007-1017.
