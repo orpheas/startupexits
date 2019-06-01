@@ -78,6 +78,8 @@ We have tested for __missing values__, __outliers__, and __categorized__ and __b
 
 Tested for __imbalance__ in the dataset and treated the imbalance with __oversampling__ the minority class.
 
+Target variable has a negative class (0) of a startup being closed or still operational and a positive class (1) of a startup being either acquired or IPO'ed.
+
 In terms of algorithms, we utilized a Logistic Regression algorithm, as well as a Support Vector Machine algorithm. We have first trained the models on a training split (70%), and subsequently tested on the testing split (30%).
 
 Logistic Regression turned out to be our better performing model with an F1 score of 61.69%, a Precision score of 63.07%, and TPR/FPR rates of 70.10%/57.55%.
@@ -95,13 +97,25 @@ Overall classification accuracy is defined as:
 Accuracy = (TP + TN) / (TP + FP + FN + TN)
 
 Other metrics are defined as:
-Precision (ability to find all relevant instances that are actually relevant) = TP / (TP+FP)
+Precision (ability to find relevant instances from the retrieved instances) = TP / (TP+FP)
 
-True Positive Rate (ability to find all relevant instances) = TP / (TP+FN)
+True Positive Rate (rate of correctly identifying positives) = TP / (TP+FN)
 
 False Positive Rate (the rate of falsely identifying negatives as positives)= FP / (FP + TN)
 
-F1 Score = 2 * ((Precision*Recall) / (Precision+Recall))
+From a Venture Capitalist perspective, we ideally want to maximize Precision; maximizing precision accepts cases where non-acquired/ipo companies are labelled as acquired or ipo, in favour of capturing a greater number of acquired/IPO companies overall.
+
+## Deployment/Discussion
+
+Precision is important; identifying the truly relevant instances of startups that manage to get acquired or go public. The 63.07% of Precision we achieved is a first step to developing a more robust and accurate model.
+
+The achieved True Positive Rate (70.10%) is also worth considering. It might be more important to achieve True Positives than minimise False Positives. This is of course a function of investment returns and needs to be investigated further. Expanding the deal flow and deal selection set to include potential unicorns (startups with a valuation of more than $1billion) could guarantee returns that far exceed any losses from failed investments.
+
+It is worth noting that the False Positive Rate (57.55%) may also be useful in de-selecting startups.
+
+## Conclusion
+
+Our models carry promise in supporting the decision making of VCs. Notably, the rates of Precision and TPR/FPR achieved, may support a hybrid approach of identifying startups that will grow and provide returns to the investing partners.
 
 ## References
 
