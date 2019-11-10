@@ -20,7 +20,7 @@ iterations have been recommended in order to produce a better and more robust mo
 
 ## Data Collection
 
-The analysis dataset was acquired via https://data.crunchbase.com/docs.
+The dataset was acquired on an Academic Research license via https://data.crunchbase.com/docs.
 
 ## Analysis Framework
 
