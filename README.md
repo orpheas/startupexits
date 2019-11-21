@@ -6,7 +6,7 @@ Startups are cornerstones of advanced economies, but they fail at a high rate. V
 Capitalists are responsible for sourcing promising startups, investing capital and value-added
 services to help them grow, with the end-goal of achieving a return on
 their investment. When investing in startups, VCs declare that some of the most significant
-factors that play a role in their decision-making are the founding team, the business
+factors that play a role in their investment decision are the founding team, the business
 model, the industry, and more. Utilizing data from Crunchbase, one of the largest
 platforms in the world for startup, funding, acquisition, and IPO data, we attempt to
 employ the decision-making factors of VCs in the production of machine learning models
